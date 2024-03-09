@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <title>Cadastre-se</title>
+</head>
+
+<header>
+    <h1>Seja nosso membro!</h1>
+</header>
+<body>
+    <section>
+        <div class="container">
+            <h2>Cadastre-se</h2>
+            <form>
+                <div class="form-campo" >
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+                <div class="form-campo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" >
+                </div>
+                <div class="form-campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-campo">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf">
+                </div>
+                <div class="form-campo">
+                    <label for="endereco">Endereço:</label>
+                    <textarea type="text" id="endereco" name="endereco"></textarea>
+                </div>
+                <div class="form-campo">
+                    <label for="text">CEP:</label>
+                    <input type="text" id="cep" name="cep"></textarea>
+                </div>
+                    <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <p>
+                2024 &copy; Aluno Alberto Marques - EBAC Full stack Python
+            </p>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="./imagens/facebook.png" alt = "Facebook">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./imagens/instagram.png" alt = "Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./imagens/youtube.png" alt = "Youtube">
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./jquery/jquery.mask.min.js"></script>
+    <script src="./jquery/jquery.validate.min.js"></script>
+    <script src="./jquery/messages_pt_BR.min.js"></script>
+    <script> 
+        $(document).ready(function() {
+
+            $('#telefone').mask('(00) 00000-0000')
+            $('#cpf').mask('000.000.000-00')
+            $('#cep').mask('000000-000')
+
+            $('form').validate({
+                rules: {
+                    nome: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    telefone: {
+                        required: false,
+                    },
+                    cpf: {
+                        required: true,
+                    },
+                    endereco: {
+                        required: true,
+                    },
+                    messages: {
+                        nome: 'Por favor, insira o seu nome'
+                    },
+                }
+            })
+        })
+    </script>
+</body>
+</html>
