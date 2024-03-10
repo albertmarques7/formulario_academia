@@ -88,17 +88,17 @@ button {
     width: 100%;
     display: block;
     padding: 8px;
-    font-size: 18px;
+    font-size: 14px;
     background-color: rgba(247, 249, 251, 0.568);
 }
 
 .form-campo textarea {
     resize: none;
-    height:16px;
+    height:18px;
 }
 
 form {
-    max-width: 300px;
+    max-width: 350px;
 }
 
 form button {
